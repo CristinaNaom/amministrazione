@@ -1,0 +1,10 @@
+<div class="card" *ngIf="personale">
+    <h3>{{personale.name}}</h3>
+    <p>Username: {{personale.username}}</p>
+    <p>Email: {{personale.email}}</p>
+    <p>Address: {{personale.address.city}} , {{personale.address.street}} , {{personale.address.suite}} , {{personale.address.zipcode}}</p>
+    <p>Company: {{personale.company.name}}</p> 
+    <p>Phone: {{personale.phone}}</p>
+    <p>Website: {{personale.website}}</p>
+    <a [routerLink]="['/posts', personale.id]"><button type="button" class="btn btn-primary mt-2">Vai ai post</button></a>
+</div>
